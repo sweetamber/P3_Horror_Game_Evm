@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{22D7E557-C23E-C612-71EC-348D4E8C8CE6}") = "Horror Game P3_v_1", "Assembly-CSharp.csproj", "{593386A1-F03B-F60D-D61F-F4E4D0C6BB8C}"
+EndProject
+Project("{22D7E557-C23E-C612-71EC-348D4E8C8CE6}") = "Horror Game P3_v_1", "Assembly-CSharp-Editor.csproj", "{D634A006-3E8B-0EF5-E6A9-080C80957F70}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{593386A1-F03B-F60D-D61F-F4E4D0C6BB8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{593386A1-F03B-F60D-D61F-F4E4D0C6BB8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{593386A1-F03B-F60D-D61F-F4E4D0C6BB8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{593386A1-F03B-F60D-D61F-F4E4D0C6BB8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D634A006-3E8B-0EF5-E6A9-080C80957F70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D634A006-3E8B-0EF5-E6A9-080C80957F70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D634A006-3E8B-0EF5-E6A9-080C80957F70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D634A006-3E8B-0EF5-E6A9-080C80957F70}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
