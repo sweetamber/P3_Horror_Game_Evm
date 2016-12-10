@@ -57,12 +57,6 @@ public class TriggerScript : MonoBehaviour
         HR = Reader.GetComponent<Stream_Reader_Scene1>();
     }
 
-
-    void Update()
-    {
-       //Debug.Log("FUCK");       
-    }
-
     IEnumerator ShutDown()
     {
         //Runs through the array of light component and turnning them off one by one, all depended on the time passed between each
@@ -112,8 +106,8 @@ public class TriggerScript : MonoBehaviour
 
         //The procent different between baseline and current hearthrate
         float procentDifferenceInCurrentHR = 0;
-        //One procent of light speed
-        float oneProcentOfMaxSpeed = maxSpeedOfLight / 100 ;
+        //One procent of Maximum light speed, adjust from 100 to 0>value to increase difficulty, the lower the number, the more seconds will be cut off
+        float oneProcentOfMaxSpeed = maxSpeedOfLight / 60 ;
         //holds the subtracted value of % difference in seconds
         float subtractSpeed = 0;
 
@@ -134,6 +128,11 @@ public class TriggerScript : MonoBehaviour
         if(speedOfLight < 5)
         {
             speedOfLight = 5;
+        }
+
+        if (speedOfLight > 20)
+        {
+            speedOfLight = 20;
         }
 
         //Printing the values

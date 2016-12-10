@@ -86,7 +86,7 @@
      <Compile Include="Assets\Character controle\Utility\WaypointCircuit.cs" />
      <Compile Include="Assets\Character controle\Utility\WaypointProgressTracker.cs" />
      <Compile Include="Assets\Downloaded_Prefabs\HorrorEnvironment_AbandonedPrison\distortedLight.cs" />
-     <Compile Include="Assets\Script\GlobalScripts\ResetValues.cs" />
+     <Compile Include="Assets\ResetValues.cs" />
      <Compile Include="Assets\Script\GlobalScripts\Stream_Reader_Scene1.cs" />
      <Compile Include="Assets\Script\Scene1\Advancement Script\Door.cs" />
      <Compile Include="Assets\Script\Scene1\Advancement Script\KeyScript.cs" />

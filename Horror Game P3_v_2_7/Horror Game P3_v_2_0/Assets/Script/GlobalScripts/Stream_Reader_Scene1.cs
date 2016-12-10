@@ -37,10 +37,9 @@ public class Stream_Reader_Scene1 : MonoBehaviour {
     void Update () {
 
         if (empty == false)
-        {          
+        {      
+            //Runs coroutine that runs every second and takes a stored value from a textFile    
             StartCoroutine("WaitAndPrint");
-            //Debug.Log("StreamReader Initialized");
-            //Debug.Log(empty + " Not Empty");
             empty = true;
         }
     }

@@ -59,15 +59,6 @@ public class TriggerScript_scene2 : MonoBehaviour {
         HR = Reader.GetComponent<Stream_Reader_Scene1>();
     }
 
-
-    void Update()
-    {
-        //Debug.Log("FUCK");
-
-        //int fliggering = Random.Range(5, 15);
-        //lights[2].range = fliggering;
-    }
-
     IEnumerator ShutDown()
     {
         for (int i = 0; i <= lights.Length; i++)
@@ -112,8 +103,8 @@ public class TriggerScript_scene2 : MonoBehaviour {
 
         //The procent different between baseline and current hearthrate
         float procentDifferenceInCurrentHR = 0;
-        //One procent of light speed
-        float oneProcentOfMaxSpeed = maxSpeedOfLight / 100;
+        //One procent of max light speed, adjust from 100 to 0>value to increase difficulty, the lower the number, the more seconds will be cut off
+        float oneProcentOfMaxSpeed = maxSpeedOfLight / 60;
         //holds the subtracted value of % difference in seconds
         float subtractSpeed = 0;
 
@@ -135,6 +126,11 @@ public class TriggerScript_scene2 : MonoBehaviour {
         {
             speedOfLight = 5;
         }
+        if (speedOfLight > 20)
+        {
+            speedOfLight = 20;
+        }
+
 
         //Printing the values
         Debug.Log(HR.baseLine +  " baseLine");
@@ -142,5 +138,4 @@ public class TriggerScript_scene2 : MonoBehaviour {
         Debug.Log(subtractSpeed + " Seconds subtracted");
         Debug.Log(speedOfLight + " New Light Speed");
     }
-
 }

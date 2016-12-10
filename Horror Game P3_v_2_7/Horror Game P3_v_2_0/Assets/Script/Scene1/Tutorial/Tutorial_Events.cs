@@ -35,7 +35,6 @@ public class Tutorial_Events : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(narrationPlayedOnce);
         //made this if statement to ensure that the coroutine is only run once every second.. So that the light will appear to blink
         if (blinkOn == true)
         {
@@ -65,21 +64,19 @@ public class Tutorial_Events : MonoBehaviour
 
     void OnTriggerEnter()
     {
-        //Debug.Log("TriggerEvent");
-
         //ready indicates that the player has entered the trigger zone for the first time, and is made false, so that it wont play tutorial narration again
+        //If the narrationPlayOnce is zero it means that the narration has yet to be played, it is then set to 1, and this will be remember for as long as the
+        //application is running
         if (ready == true && narrationOver == false && narrationPlayedOnce == 0)
         {
-            //Debug.Log(ready);
             audio1.Play();
-             narrationPlayedOnce = 1;
+            narrationPlayedOnce = 1;
             PlayerPrefs.SetInt("narrationDoneOnce", narrationPlayedOnce);
             ready = false;
         }
         //when the script is run a second time during runTime, the value narrationPlayedOnce is = 1 and ready is again equal to true, thus this will be run instead of narration 
         else if (ready == true && narrationPlayedOnce == 1)
         {
-            Debug.Log("PLAYED!!!!!!!!");
             timeTriggerEvents = 0;
             ready = false;
         }
