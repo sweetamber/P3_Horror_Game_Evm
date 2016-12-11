@@ -34,7 +34,6 @@ public class TriggerScript : MonoBehaviour
 
     void Start()
     {
-
         audio1 = GetComponent<AudioSource>();
 
         //Calls all the lights in a scene
@@ -55,6 +54,7 @@ public class TriggerScript : MonoBehaviour
 
         GameObject Reader = GameObject.Find("Stream_Reader1");
         HR = Reader.GetComponent<Stream_Reader_Scene1>();
+       
     }
 
     IEnumerator ShutDown()
@@ -102,44 +102,47 @@ public class TriggerScript : MonoBehaviour
 
     void calculateLight()
     {
-        //Basically, if the player is 10 procent more scared than when he started the game, he will have 10 procent of seconds subtracted from the speed of light
-
-        //The procent different between baseline and current hearthrate
-        float procentDifferenceInCurrentHR = 0;
-        //One procent of Maximum light speed, adjust from 100 to 0>value to increase difficulty, the lower the number, the more seconds will be cut off
-        float oneProcentOfMaxSpeed = maxSpeedOfLight / 60 ;
-        //holds the subtracted value of % difference in seconds
-        float subtractSpeed = 0;
-
-        procentDifferenceInCurrentHR = 0;
-        subtractSpeed = 0;
-
-        //HR calculations-----------------------------------------    
-        //Calculates the procent difference from the baseLine and the current HR i.e. 10 procent difference(10 procent more scared).
-        //Formula found at http://www.calculatorsoup.com/calculators/algebra/percent-difference-calculator.php
-        procentDifferenceInCurrentHR = (HR.convert - HR.baseLine) / (HR.convert + HR.baseLine / 2 ) * 100;
-
-        //Light calculations--------------------------------------------   
-        //Then it takes the procent difference between hearthrate and finds out how many seconds i.e. 10 procent increased hearthrate is in seconds 
-        subtractSpeed = oneProcentOfMaxSpeed * procentDifferenceInCurrentHR;
-        //It then substracts the amount of seconds equal to i.e. 10 procent of the maximum speed of light and then defines a new speed.
-        speedOfLight = maxSpeedOfLight - subtractSpeed;
-
-        if(speedOfLight < 5)
+        if (PlayerPrefs.GetInt("ON_OFF") != 0)
         {
-            speedOfLight = 5;
-        }
+            //Basically, if the player is 10 procent more scared than when he started the game, he will have 10 procent of seconds subtracted from the speed of light
 
-        if (speedOfLight > 20)
-        {
-            speedOfLight = 20;
-        }
+            //The procent different between baseline and current hearthrate
+            float procentDifferenceInCurrentHR = 0;
+            //One procent of Maximum light speed, adjust from 100 to 0>value to increase difficulty, the lower the number, the more seconds will be cut off
+            float oneProcentOfMaxSpeed = maxSpeedOfLight / 60;
+            //holds the subtracted value of % difference in seconds
+            float subtractSpeed = 0;
 
-        //Printing the values
-        Debug.Log(oneProcentOfMaxSpeed + " one Procent Max Speed");
-        Debug.Log(procentDifferenceInCurrentHR + " Procent Difference in HR");
-        Debug.Log(subtractSpeed + " Seconds subtracted");
-        Debug.Log(speedOfLight + " New Light Speed");
+            procentDifferenceInCurrentHR = 0;
+            subtractSpeed = 0;
+
+            //HR calculations-----------------------------------------    
+            //Calculates the procent difference from the baseLine and the current HR i.e. 10 procent difference(10 procent more scared).
+            //Formula found at http://www.calculatorsoup.com/calculators/algebra/percent-difference-calculator.php
+            procentDifferenceInCurrentHR = (HR.convert - HR.baseLine) / (HR.convert + HR.baseLine / 2) * 100;
+
+            //Light calculations--------------------------------------------   
+            //Then it takes the procent difference between hearthrate and finds out how many seconds i.e. 10 procent increased hearthrate is in seconds 
+            subtractSpeed = oneProcentOfMaxSpeed * procentDifferenceInCurrentHR;
+            //It then substracts the amount of seconds equal to i.e. 10 procent of the maximum speed of light and then defines a new speed.
+            speedOfLight = maxSpeedOfLight - subtractSpeed;
+
+            if (speedOfLight < 5)
+            {
+                speedOfLight = 5;
+            }
+
+            if (speedOfLight > 20)
+            {
+                speedOfLight = 20;
+            }
+
+            //Printing the values
+            Debug.Log(oneProcentOfMaxSpeed + " one Procent Max Speed");
+            Debug.Log(procentDifferenceInCurrentHR + " Procent Difference in HR");
+            Debug.Log(subtractSpeed + " Seconds subtracted");
+            Debug.Log(speedOfLight + " New Light Speed");
+        }
     }
 }
 

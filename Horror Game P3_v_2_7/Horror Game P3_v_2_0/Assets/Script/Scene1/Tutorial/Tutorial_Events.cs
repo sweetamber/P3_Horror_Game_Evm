@@ -12,7 +12,7 @@ public class Tutorial_Events : MonoBehaviour
     public bool narrationOver = false;
 
     //This to cancel narration a second time, if narration played once, then narrationPlayedOnce = 1, if = 1, then skip narratioon
-    int narrationPlayedOnce;
+    public int narrationPlayedOnce;
 
     public float timeBlink = 0.5f;
     public float timeTriggerEvents = 10f;
@@ -58,8 +58,6 @@ public class Tutorial_Events : MonoBehaviour
 
         blinkOn = true;
         narrationOver = true;
-
-
     }
 
     void OnTriggerEnter()
@@ -84,5 +82,10 @@ public class Tutorial_Events : MonoBehaviour
         StartCoroutine("EventTiming");
     }
 
+    void OnApplicationQuit()
+    {
+         narrationPlayedOnce = 0;
+         PlayerPrefs.SetInt("narrationDoneOnce", narrationPlayedOnce);
+    }
 
 }

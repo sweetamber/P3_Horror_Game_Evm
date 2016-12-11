@@ -16,11 +16,6 @@ public class Door : MonoBehaviour
     static KeyScript keytrigger;
     CharacterController playerMovement; 
 
-    
-
-
-
-
     void Start()
     {
 
@@ -40,12 +35,7 @@ public class Door : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
 
-
-    }
 
     void OnTriggerStay()
     {

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEditor.Animations;
+//using UnityEditor.Animations;
 
 public class Door3_scene3 : MonoBehaviour {
     //This script is attached to scene2: Door_Opening_System --> Door-key_3(Office) --> Door_3
