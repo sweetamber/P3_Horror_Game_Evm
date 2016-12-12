@@ -47,6 +47,7 @@ public class EndSceneTrigger : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(narrationOver);
         //To time other events with the narration, in this case, to match up the light to turn on and off according to what is said in the narration (Choosing a door)
         seconds = Time.time - Startime;
         //Debug.Log(seconds + " Scene3");

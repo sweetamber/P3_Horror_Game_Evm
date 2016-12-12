@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class GameOverMyself : MonoBehaviour {
@@ -94,9 +95,9 @@ public class GameOverMyself : MonoBehaviour {
             Stage3 = true;
         }
         //Ends the game
-        if(seconds >= 13 && Stage4 == false)
+        if(seconds >= 14 && Stage4 == false)
         {
-            //Debug.Log("Die");
+            SceneManager.LoadScene("Scene6_Game_End");
         }
     }
 }

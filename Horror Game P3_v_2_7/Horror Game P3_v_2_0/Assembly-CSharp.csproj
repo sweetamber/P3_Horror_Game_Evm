@@ -86,11 +86,14 @@
      <Compile Include="Assets\Character controle\Utility\WaypointCircuit.cs" />
      <Compile Include="Assets\Character controle\Utility\WaypointProgressTracker.cs" />
      <Compile Include="Assets\Downloaded_Prefabs\HorrorEnvironment_AbandonedPrison\distortedLight.cs" />
+     <Compile Include="Assets\Objectives_Scene3.cs" />
+     <Compile Include="Assets\Script\Fligger_Light_Game_Done.cs" />
      <Compile Include="Assets\Script\GlobalScripts\Calculate_Hearthrate_Baseline.cs" />
      <Compile Include="Assets\Script\GlobalScripts\EVM_On_Off.cs" />
      <Compile Include="Assets\Script\GlobalScripts\Stream_Reader_Scene1.cs" />
      <Compile Include="Assets\Script\Scene1\Advancement Script\Door.cs" />
      <Compile Include="Assets\Script\Scene1\Advancement Script\KeyScript.cs" />
+     <Compile Include="Assets\Script\Scene1\Advancement Script\Objectives_Scene1.cs" />
      <Compile Include="Assets\Script\Scene1\Intro\anima.cs" />
      <Compile Include="Assets\Script\Scene1\JumpScare_lvl1.cs" />
      <Compile Include="Assets\Script\Scene1\Light_OFF_deathZones\DeathTrigger0.cs" />
@@ -117,6 +120,7 @@
      <Compile Include="Assets\Script\Scene2\Environment\Fligger_light.cs" />
      <Compile Include="Assets\Script\Scene2\Environment\Sound_Environment.cs" />
      <Compile Include="Assets\Script\Scene2\JumpScare\JumpScare_Scene2_Yellow_CellDoor.cs" />
+     <Compile Include="Assets\Script\Scene2\Objectives_Scene2.cs" />
      <Compile Include="Assets\Script\Scene3\EndSceneTrigger.cs" />
      <Compile Include="Assets\Script\Scene3\SaveSelf_Ending.cs" />
      <Compile Include="Assets\Script\Scene3\SaveSister_Ending.cs" />

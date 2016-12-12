@@ -17,3 +17,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Scene4_save_girl.unity
   - enabled: 1
     path: Assets/Scenes/Scene5_save_myself.unity
+  - enabled: 1
+    path: Assets/Scenes/Scene6_Game_End.unity

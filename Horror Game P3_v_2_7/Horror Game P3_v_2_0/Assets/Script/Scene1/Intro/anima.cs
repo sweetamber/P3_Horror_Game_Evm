@@ -19,7 +19,7 @@ public class anima : MonoBehaviour {
     // Used to time the jump from camera 2(animation) to camera 1 (Animation)
     float time = 0;
     public float timeOfCutScene = 15;
-    bool CutSceneRunning = true;
+    public bool CutSceneRunning = true;
 
 	// Use this for initialization
 	void Start () {

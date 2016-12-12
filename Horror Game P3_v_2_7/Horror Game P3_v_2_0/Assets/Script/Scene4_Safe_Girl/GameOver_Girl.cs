@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class GameOver_Girl : MonoBehaviour {
 
@@ -57,10 +58,10 @@ public class GameOver_Girl : MonoBehaviour {
         seconds = Time.time - startTime;
         //Times the events that happens during the narration
         if (seconds >= 2f && Stage1 == false)
-        {   
+        {
             audio1.Play();
             Stage1 = true;
-            
+
             Debug.Log(Stage1);
         }
 
@@ -72,10 +73,9 @@ public class GameOver_Girl : MonoBehaviour {
             Debug.Log(Stage2);
         }
 
-        /*if (seconds >= 6)
+        if (seconds >= 25)
         {
-            Debug.Log("Breathing1");
-            lightOutAccess.gameStateOver();
-        }*/
+            SceneManager.LoadScene("Scene6_Game_End");
+        }
     }
 }

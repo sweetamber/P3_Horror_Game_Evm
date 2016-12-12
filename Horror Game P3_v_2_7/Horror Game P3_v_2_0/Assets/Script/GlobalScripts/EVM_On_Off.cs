@@ -10,7 +10,7 @@ public class EVM_On_Off : MonoBehaviour
 
         void Start()
     {
-        PlayerPrefs.GetInt("Counter", On_Or_Off);
+        PlayerPrefs.GetInt("ON_OFF", On_Or_Off);
     }
     void Update()
     {
@@ -20,14 +20,45 @@ public class EVM_On_Off : MonoBehaviour
         {
             On_Or_Off = 0;
             PlayerPrefs.SetInt("ON_OFF", On_Or_Off);
-            SceneManager.LoadScene("Scene1");
         }
         //Sets the value to 1 and runs the hearthrate calculations again
         if (Input.GetKeyDown(KeyCode.F11))
         {
             On_Or_Off = 1;
             PlayerPrefs.SetInt("ON_OFF", On_Or_Off);
+        }
+
+        //OPTION TO CHANGE BETWEEN LEVELS
+        if (Input.GetKeyDown(("[0]")))
+        {
             SceneManager.LoadScene("Scene0_Evm_Calibration");
+        }
+
+        if (Input.GetKeyDown(("[1]")))
+        {
+            SceneManager.LoadScene("Scene1");
+        }
+
+        if (Input.GetKeyDown(("[2]")))
+        {
+            SceneManager.LoadScene("Scene2");
+        }
+
+        if (Input.GetKeyDown(("[3]")))
+        {
+            SceneManager.LoadScene("Scene3");
+        }
+        if (Input.GetKeyDown(("[4]")))
+        {
+            SceneManager.LoadScene("Scene4_save_girl");
+        }
+        if (Input.GetKeyDown(("[5]")))
+        {
+            SceneManager.LoadScene("Scene5_save_myself");
+        }
+        if (Input.GetKeyDown(("[6]")))
+        {
+            SceneManager.LoadScene("Scene6_Game_End");
         }
     }
 
